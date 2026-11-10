@@ -88,6 +88,15 @@ A fully blocked temporal split has now been added to the project, separating tra
 
 Additional limitations include incomplete seasonal and interannual coverage, spatial dependence among collocations, potential representativeness differences between satellite pixels and point monitors, uncertainty in cloud screening and meteorological interpolation, and weaker performance for high-concentration events. The current model is a research prototype and is not intended for regulatory or operational use.
 
+## Current work: what can the spectra actually tell us?
+
+To understand what limits the real-data model, I built a radiative transfer simulation pipeline (VLIDORT) driven by realistic CAMS and ERA5 atmospheric profiles and used it for an information-content analysis.
+
+- **Single-pixel degeneracy:** over polluted cities, a single spectrum carries information on how close NO₂ is to the surface, but this signal is almost indistinguishable from a small change in the spectral slope of surface reflectance.
+- **Multi-day recovery:** jointly analysing several days of the same pixel recovers much of this information in idealized conditions; robustness under realistic aerosol variability is being tested.
+
+These results motivate probabilistic, latent-state models that treat surface and aerosol conditions as slowly evolving states, with a neural emulator of radiative transfer as the observation model.
+
 ## Current status
 
 This project is currently under active development. Source code and research data are not yet publicly available.
