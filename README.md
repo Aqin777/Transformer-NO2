@@ -105,10 +105,8 @@ The end-to-end workflow for collocation, preprocessing, feature fusion, model tr
 
 ## Ongoing and future work
 
-- I am investigating performance under the fully blocked temporal split and across seasons, regions, stations, and concentration regimes.
-- I am exploring CTM-derived vertical profiles and surface-to-column relationships as additional physical context.
-- I plan to incorporate physics-guided consistency constraints linking spectral information, atmospheric structure, and near-surface concentrations.
-- I am investigating uncertainty quantification, high-pollution-event performance, and comparisons with simpler statistical and machine-learning baselines.
+- multi-day analysis under realistic aerosol variability
+- neural emulator of radiative transfer
 
 ## Data and code availability
 
