@@ -90,12 +90,12 @@ Additional limitations include incomplete seasonal and interannual coverage, spa
 
 ## Current work: what can the spectra actually tell us?
 
-To understand what limits the real-data model, I built a radiative transfer simulation pipeline (VLIDORT) driven by realistic CAMS and ERA5 atmospheric profiles and used it for an information-content analysis.
+To understand the limits of the real-data model, I built a radiative transfer simulation pipeline (VLIDORT) driven by realistic CAMS and ERA5 profiles, validated against measured TROPOMI spectra on five scenes.
 
-- **Single-pixel degeneracy:** over polluted cities, a single spectrum carries information on how close NO₂ is to the surface, but this signal is almost indistinguishable from a small change in the spectral slope of surface reflectance.
-- **Multi-day recovery:** jointly analysing several days of the same pixel recovers much of this information in idealized conditions; robustness under realistic aerosol variability is being tested.
+- **Near-surface degeneracy:** over polluted cities, the signal of how close NO₂ sits to the ground is nearly degenerate with the spectral slope of surface reflectance; the degrees of freedom for signal drop from 0.88 to 0.31 once that slope is unknown (sensitivity analysis under assumed priors).
+- **In progress:** training on simulated spectra from realistic CAMS profiles for column and near-surface NO₂.
 
-These results motivate probabilistic, latent-state models that treat surface and aerosol conditions as slowly evolving states, with a neural emulator of radiative transfer as the observation model.
+**Next:** a neural emulator of the radiative transfer model, with reconstruction of unlabeled TROPOMI spectra to narrow the simulation-to-observation gap.
 
 ## Current status
 
