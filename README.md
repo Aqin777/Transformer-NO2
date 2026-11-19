@@ -68,8 +68,8 @@ The current preliminary temporally held-out test set contains **61,954 satellite
 
 | Metric | Preliminary value |
 |---|---:|
-| R² | 0.48 |
-| RMSE | 9.90 μg m⁻³ |
+| R² | 0.49 (0.48–0.51 across three seeds) |
+| RMSE | ≈ 9.8 μg m⁻³ |
 | MAE | 6.66 μg m⁻³ |
 
 ![Observed versus predicted NO2 and residual distribution on the preliminary temporally held-out test set](assets/preliminary_test_results.png)
